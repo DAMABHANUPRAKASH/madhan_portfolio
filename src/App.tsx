@@ -228,7 +228,8 @@ function App() {
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400/20 to-purple-400/20 animate-ping"></div>
               </div>
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-2">Hey, I'm Raphael <span role='img' aria-label='wave'>👋</span></h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-2">Hey, I'm Madhan
+              <span role='img' aria-label='wave'>👋</span></h2>
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-gray-900 mb-4">AI Portfolio</h1>
           </div>
           {/* Show chat messages on the home page */}
