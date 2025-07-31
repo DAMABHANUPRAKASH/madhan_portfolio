@@ -63,7 +63,7 @@ const MeSection: React.FC<MeSectionProps> = ({ onChatSubmit }) => {
             <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Data</span>
             <span className="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">Analyst, Engineer</span>
             <span className="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">Bangalore</span>
-            <span className="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">Assetmantle</span>
+            <span className="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">CSE</span>
             <span className="px-4 py-2 bg-pink-100 text-pink-800 rounded-full text-sm font-medium">Data Enthusiast</span>
           </div>
         </div>
