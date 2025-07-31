@@ -1,7 +1,12 @@
 import React from 'react';
 import { Mountain, Camera, Play } from 'lucide-react';
+import SectionChatInput from '../SectionChatInput';
 
-const FunSection: React.FC = () => {
+interface FunSectionProps {
+  onChatSubmit: (message: string) => void;
+}
+
+const FunSection: React.FC<FunSectionProps> = ({ onChatSubmit }) => {
   return (
     <div className="w-full max-w-4xl mx-auto p-6 space-y-8">
       {/* Header */}
@@ -84,6 +89,12 @@ const FunSection: React.FC = () => {
           </div>
         </div>
       </div>
+      
+      {/* Chat Input */}
+      <SectionChatInput 
+        onSubmit={onChatSubmit}
+        placeholder="Ask me about my adventures and hobbies..."
+      />
     </div>
   );
 };

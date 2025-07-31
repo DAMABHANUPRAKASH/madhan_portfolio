@@ -22,8 +22,13 @@ import {
   Heart,
   Eye
 } from 'lucide-react';
+import SectionChatInput from '../SectionChatInput';
 
-const SkillsSection: React.FC = () => {
+interface SkillsSectionProps {
+  onChatSubmit: (message: string) => void;
+}
+
+const SkillsSection: React.FC<SkillsSectionProps> = ({ onChatSubmit }) => {
   const skillCategories = [
     {
       title: 'Frontend Development',
@@ -153,6 +158,12 @@ const SkillsSection: React.FC = () => {
           do you think are most important in tech? 🤔
         </p>
       </div>
+      
+      {/* Chat Input */}
+      <SectionChatInput 
+        onSubmit={onChatSubmit}
+        placeholder="Ask me about my skills and expertise..."
+      />
     </div>
   );
 };

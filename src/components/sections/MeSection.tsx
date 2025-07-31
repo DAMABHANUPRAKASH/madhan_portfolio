@@ -1,8 +1,13 @@
 import React from 'react';
 import { MapPin, Calendar } from 'lucide-react';
 import { MdOutlineDownload } from 'react-icons/md';
+import SectionChatInput from '../SectionChatInput';
 
-const MeSection: React.FC = () => {
+interface MeSectionProps {
+  onChatSubmit: (message: string) => void;
+}
+
+const MeSection: React.FC<MeSectionProps> = ({ onChatSubmit }) => {
   return (
     <div className="w-full max-w-4xl mx-auto p-6 space-y-8">
       {/* Header with Avatar */}
@@ -99,6 +104,12 @@ const MeSection: React.FC = () => {
           </a>
         </div>
       </div>
+      
+      {/* Chat Input */}
+      <SectionChatInput 
+        onSubmit={onChatSubmit}
+        placeholder="Ask me anything about my background..."
+      />
     </div>
   );
 };

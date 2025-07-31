@@ -12,6 +12,7 @@ import ProjectsSection from './components/sections/ProjectsSection';
 import SkillsSection from './components/sections/SkillsSection';
 import FunSection from './components/sections/FunSection';
 import ContactSection from './components/sections/ContactSection';
+import ChatPage from './components/ChatPage';
 
 interface Message {
   id: string;
@@ -27,7 +28,10 @@ function App() {
   const [showSectionSummary, setShowSectionSummary] = useState(true);
   const [aiPrompt, setAiPrompt] = useState<string | null>(null);
   const [aiMessage, setAiMessage] = useState<string | null>(null);
-  const [homeInput, setHomeInput] = useState(''); // <-- add state for home input
+  const [homeInput, setHomeInput] = useState('');
+  const [showChatPage, setShowChatPage] = useState(false);
+  const [chatMessages, setChatMessages] = useState<Message[]>([]);
+  const [isChatLoading, setIsChatLoading] = useState(false);
 
   // Default AI questions for each section
   const sectionQuestions: Record<string, string> = {
@@ -61,6 +65,84 @@ function App() {
 
   const handleContactClick = () => {
     setActiveTab('contact');
+  };
+
+  const handleSectionChatSubmit = async (messageText: string) => {
+    const userMessage: Message = {
+      id: Date.now().toString(),
+      text: messageText,
+      isUser: true,
+      timestamp: new Date()
+    };
+
+    setChatMessages([userMessage]);
+    setShowChatPage(true);
+    setIsChatLoading(true);
+
+    try {
+      const response = await generateResponse(messageText);
+      
+      const aiMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        text: response,
+        isUser: false,    
+        timestamp: new Date()
+      };
+
+      setChatMessages(prev => [...prev, aiMessage]);
+    } catch (error) {
+      const errorMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        text: "I'm sorry, I encountered an error. Please try again!",
+        isUser: false,
+        timestamp: new Date()
+      };
+
+      setChatMessages(prev => [...prev, errorMessage]);
+    } finally {
+      setIsChatLoading(false);
+    }
+  };
+
+  const handleChatPageMessage = async (messageText: string) => {
+    const userMessage: Message = {
+      id: Date.now().toString(),
+      text: messageText,
+      isUser: true,
+      timestamp: new Date()
+    };
+
+    setChatMessages(prev => [...prev, userMessage]);
+    setIsChatLoading(true);
+
+    try {
+      const response = await generateResponse(messageText);
+      
+      const aiMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        text: response,
+        isUser: false,    
+        timestamp: new Date()
+      };
+
+      setChatMessages(prev => [...prev, aiMessage]);
+    } catch (error) {
+      const errorMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        text: "I'm sorry, I encountered an error. Please try again!",
+        isUser: false,
+        timestamp: new Date()
+      };
+
+      setChatMessages(prev => [...prev, errorMessage]);
+    } finally {
+      setIsChatLoading(false);
+    }
+  };
+
+  const handleBackToPortfolio = () => {
+    setShowChatPage(false);
+    setChatMessages([]);
   };
 
   const handleSendMessage = async (messageText: string) => {
@@ -119,7 +201,17 @@ function App() {
   return (
     <div className="min-h-screen relative overflow-hidden">
       <Background />
-      <Header onContactClick={() => handleTabChange('contact')} />
+      {!showChatPage && <Header onContactClick={() => handleTabChange('contact')} />}
+      
+      {showChatPage ? (
+        <ChatPage 
+          messages={chatMessages}
+          onSendMessage={handleChatPageMessage}
+          isLoading={isChatLoading}
+          onBack={handleBackToPortfolio}
+        />
+      ) : (
+      <>
       {activeTab === null ? (
         // Home Page UI
         <div className="flex flex-col items-center justify-center min-h-screen px-4 py-20">
@@ -193,15 +285,17 @@ function App() {
           {/* Section Summary */}
           {showSectionSummary && (
             <div className="w-full max-w-6xl mb-8">
-              {activeTab === 'me' && <MeSection />}
-              {activeTab === 'projects' && <ProjectsSection />}
-              {activeTab === 'skills' && <SkillsSection />}
-              {activeTab === 'fun' && <FunSection />}
-              {activeTab === 'contact' && <ContactSection />}
+              {activeTab === 'me' && <MeSection onChatSubmit={handleSectionChatSubmit} />}
+              {activeTab === 'projects' && <ProjectsSection onChatSubmit={handleSectionChatSubmit} />}
+              {activeTab === 'skills' && <SkillsSection onChatSubmit={handleSectionChatSubmit} />}
+              {activeTab === 'fun' && <FunSection onChatSubmit={handleSectionChatSubmit} />}
+              {activeTab === 'contact' && <ContactSection onChatSubmit={handleSectionChatSubmit} />}
             </div>
           )}
           <NavigationTabs activeTab={activeTab} onTabChange={handleTabChange} />
         </div>
+      )}
+      </>
       )}
     </div>
   );

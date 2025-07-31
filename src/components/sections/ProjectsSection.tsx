@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import ProjectModal from '../ProjectModal';
+import SectionChatInput from '../SectionChatInput';
 
 interface Project {
   id: number;
@@ -18,7 +19,11 @@ interface Project {
   tags: string[];
 }
 
-const ProjectsSection: React.FC = () => {
+interface ProjectsSectionProps {
+  onChatSubmit: (message: string) => void;
+}
+
+const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onChatSubmit }) => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -213,6 +218,12 @@ const ProjectsSection: React.FC = () => {
         project={selectedProject}
         isOpen={isModalOpen}
         onClose={handleCloseModal}
+      />
+      
+      {/* Chat Input */}
+      <SectionChatInput 
+        onSubmit={onChatSubmit}
+        placeholder="Ask me about my projects..."
       />
     </div>
   );

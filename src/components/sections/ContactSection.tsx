@@ -1,7 +1,12 @@
 import React from 'react';
 import { Calendar, MapPin, Code, Briefcase, Target, Mail, ExternalLink } from 'lucide-react';
+import SectionChatInput from '../SectionChatInput';
 
-const ContactSection: React.FC = () => {
+interface ContactSectionProps {
+  onChatSubmit: (message: string) => void;
+}
+
+const ContactSection: React.FC<ContactSectionProps> = ({ onChatSubmit }) => {
   const techStack = [
     'Python', 'Next.js', 'TypeScript', 'Tailwind CSS',
     'Weaviate', 'Pinecone', 'Vector DBs',
@@ -129,6 +134,12 @@ const ContactSection: React.FC = () => {
           Oh, you bet! Here's the scoop on what I'm looking for in an internship 👇
         </p>
       </div>
+      
+      {/* Chat Input */}
+      <SectionChatInput 
+        onSubmit={onChatSubmit}
+        placeholder="Ask me about opportunities and contact..."
+      />
     </div>
   );
 };
