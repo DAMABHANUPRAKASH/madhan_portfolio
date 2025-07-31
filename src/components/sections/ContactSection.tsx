@@ -57,7 +57,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ onChatSubmit }) => {
               <MapPin size={16} />
               <span className="font-semibold">Location</span>
             </div>
-            <p className="text-gray-700">Preferably San Francisco or remote</p>
+            <p className="text-gray-700">Bangalore</p>
           </div>
         </div>
 
