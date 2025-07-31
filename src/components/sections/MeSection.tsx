@@ -76,7 +76,7 @@ const MeSection: React.FC<MeSectionProps> = ({ onChatSubmit }) => {
           Now, I'm having responsibilites at Assetmatle in Bangalore, where I get to work on some super cool data related projects.
         </p>
         <p className="text-gray-700 leading-relaxed">
-          I'm really passionate about Data, cutting edge AI technologies and contributing to data projects that are both powerful and useful. ! What else do you want to know? 😊
+          I'm really passionate about Data, cutting edge AI technologies and contributing to data projects that are both powerful and useful. Whoo! What else do you want to know? 😊
         </p>
       </div>
 
@@ -84,8 +84,8 @@ const MeSection: React.FC<MeSectionProps> = ({ onChatSubmit }) => {
       <div className="w-full max-w-2xl mx-auto mt-12">
         <div className="bg-gray-50 rounded-2xl shadow flex items-center justify-between p-6">
           <div>
-            <div className="font-bold text-lg text-gray-900 mb-1">Raphael's Resume</div>
-            <div className="text-gray-600 text-sm mb-2">Full Stack Developer • AI Specialist</div>
+            <div className="font-bold text-lg text-gray-900 mb-1">Madan's Resume</div>
+            <div className="text-gray-600 text-sm mb-2">Data Application Engineer </div>
             <div className="flex items-center space-x-4 text-xs text-gray-500">
               <span>PDF</span>
               <span>• Updated March 2025</span>
