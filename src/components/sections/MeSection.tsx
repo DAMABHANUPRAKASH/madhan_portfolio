@@ -19,15 +19,15 @@ const MeSection: React.FC<MeSectionProps> = ({ onChatSubmit }) => {
             className="w-full h-full object-cover"
           />
         </div>
-        <h2 className="text-4xl font-bold text-gray-800 mb-4">Raphael Giraud</h2>
+        <h2 className="text-4xl font-bold text-gray-800 mb-4">Madankumar Budidapalli</h2>
         <div className="flex items-center justify-center space-x-6 text-gray-600 mb-6">
           <div className="flex items-center space-x-1">
             <Calendar size={16} />
-            <span>21 years old</span>
+            <span>23 years old</span>
           </div>
           <div className="flex items-center space-x-1">
             <MapPin size={16} />
-            <span>Paris, France</span>
+            <span>Andhra Pradesh, India</span>
           </div>
         </div>
       </div>
