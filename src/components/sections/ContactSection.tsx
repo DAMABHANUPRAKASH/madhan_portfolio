@@ -1,12 +1,7 @@
 import React from 'react';
 import { Calendar, MapPin, Code, Briefcase, Target, Mail, ExternalLink } from 'lucide-react';
-import SectionChatInput from '../SectionChatInput';
 
-interface ContactSectionProps {
-  onChatSubmit: (message: string) => void;
-}
-
-const ContactSection: React.FC<ContactSectionProps> = ({ onChatSubmit }) => {
+const ContactSection: React.FC = () => {
   const techStack = [
     'Python', 'Next.js', 'TypeScript', 'Tailwind CSS',
     'Weaviate', 'Pinecone', 'Vector DBs',
@@ -31,8 +26,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({ onChatSubmit }) => {
             <div className="text-2xl">👨‍💻</div>
           </div>
           <div className="flex-1">
-            <h2 className="text-2xl font-bold text-gray-800">Madankumar</h2>
-            <p className="text-gray-600">Data Analyst</p>
+            <h2 className="text-2xl font-bold text-gray-800">Mad</h2>
+            <p className="text-gray-600">Internship Application</p>
           </div>
           <div className="flex items-center space-x-2 bg-green-100 text-green-800 px-3 py-1 rounded-full">
             <div className="w-2 h-2 bg-green-500 rounded-full"></div>
@@ -48,7 +43,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ onChatSubmit }) => {
               <Calendar size={16} />
               <span className="font-semibold">Duration</span>
             </div>
-            <p className="text-gray-700">February,2025 – present</p>
+            <p className="text-gray-700">6 months – starting September 2025 (fall 2025)</p>
           </div>
 
           {/* Location */}
@@ -57,7 +52,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ onChatSubmit }) => {
               <MapPin size={16} />
               <span className="font-semibold">Location</span>
             </div>
-            <p className="text-gray-700">Bangalore</p>
+            <p className="text-gray-700">Preferably San Francisco or remote</p>
           </div>
         </div>
 
@@ -134,12 +129,6 @@ const ContactSection: React.FC<ContactSectionProps> = ({ onChatSubmit }) => {
           Oh, you bet! Here's the scoop on what I'm looking for in an internship 👇
         </p>
       </div>
-      
-      {/* Chat Input */}
-      <SectionChatInput 
-        onSubmit={onChatSubmit}
-        placeholder="Ask me about opportunities and contact..."
-      />
     </div>
   );
 };
