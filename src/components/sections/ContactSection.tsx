@@ -31,8 +31,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({ onChatSubmit }) => {
             <div className="text-2xl">👨‍💻</div>
           </div>
           <div className="flex-1">
-            <h2 className="text-2xl font-bold text-gray-800">Your Name</h2>
-            <p className="text-gray-600">Internship Application</p>
+            <h2 className="text-2xl font-bold text-gray-800">Madankumar</h2>
+            <p className="text-gray-600">Data Analyst</p>
           </div>
           <div className="flex items-center space-x-2 bg-green-100 text-green-800 px-3 py-1 rounded-full">
             <div className="w-2 h-2 bg-green-500 rounded-full"></div>
@@ -48,7 +48,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ onChatSubmit }) => {
               <Calendar size={16} />
               <span className="font-semibold">Duration</span>
             </div>
-            <p className="text-gray-700">6 months – starting September 2025 (fall 2025)</p>
+            <p className="text-gray-700">February,2025 – present</p>
           </div>
 
           {/* Location */}
