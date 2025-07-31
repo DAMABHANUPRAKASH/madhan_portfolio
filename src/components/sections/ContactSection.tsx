@@ -26,7 +26,7 @@ const ContactSection: React.FC = () => {
             <div className="text-2xl">👨‍💻</div>
           </div>
           <div className="flex-1">
-            <h2 className="text-2xl font-bold text-gray-800">Mad</h2>
+            <h2 className="text-2xl font-bold text-gray-800">Madankumar </h2>
             <p className="text-gray-600">Internship Application</p>
           </div>
           <div className="flex items-center space-x-2 bg-green-100 text-green-800 px-3 py-1 rounded-full">
