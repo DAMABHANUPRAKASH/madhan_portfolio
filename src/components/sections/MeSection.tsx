@@ -53,18 +53,18 @@ const MeSection: React.FC<MeSectionProps> = ({ onChatSubmit }) => {
               <span className="text-lg font-medium text-gray-700">Hey</span>
             </div>
             <p className="text-gray-700 leading-relaxed mb-4">
-              I'm Raph also known as Toukoum. I'm a developer specializing in AI at 42 Paris. I'm 
-              working at LightOn AI in Paris. I'm passionate about AI, tech, Entrepreneurship and SaaS tech.
+              I'm Madankumar also known as Madan. I'm a data application engineer specializing in data at Bangalore. I'm 
+              working at Assetmantle in Bangalore. I'm passionate about Data, AI and new trending tech.
             </p>
           </div>
           
           {/* Tags */}
           <div className="flex flex-wrap gap-3 mb-6">
-            <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">AI</span>
-            <span className="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">Developer</span>
-            <span className="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">42 Paris</span>
-            <span className="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">Sport</span>
-            <span className="px-4 py-2 bg-pink-100 text-pink-800 rounded-full text-sm font-medium">SaaS Builder</span>
+            <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Data</span>
+            <span className="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">Analyst, Engineer</span>
+            <span className="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">Banaglore</span>
+            <span className="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">Assetmantle</span>
+            <span className="px-4 py-2 bg-pink-100 text-pink-800 rounded-full text-sm font-medium">Data Enthusiast</span>
           </div>
         </div>
       </div>
@@ -72,13 +72,11 @@ const MeSection: React.FC<MeSectionProps> = ({ onChatSubmit }) => {
       {/* Bio */}
       <div className="mt-8 space-y-4">
         <p className="text-gray-700 leading-relaxed">
-          I'm Raphael Giraud, a 21-year-old full-stack developer specializing in AI, currently rocking it at 42 
-          Paris. Before diving into the tech world, I was a competitive mountain biker, which was a wild ride! 
-          Now, I'm interning at LightOn AI in Paris, where I get to work on some super cool AI projects.
+          I'm Madankumar Budidapalli, a 23-year-old data application engineer specializing in Data, currently rocking it at Bangalore. Before diving into the tech world, I was a competitive mountain biker, which was a wild ride! 
+          Now, I'm having responsibilites at Assetmatle in Bangalore, where I get to work on some super cool data related projects.
         </p>
         <p className="text-gray-700 leading-relaxed">
-          I'm really passionate about AI, tech, entrepreneurship, and building SaaS products that are both 
-          powerful and user-friendly. Voilà! What else do you want to know? 😊
+          I'm really passionate about Data, cutting edge AI technologies and contributing to data projects that are both powerful and useful. ! What else do you want to know? 😊
         </p>
       </div>
 
