@@ -83,7 +83,6 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ onChatSubmit }) => {
         { name: 'Communication', icon: MessageSquare },
         { name: 'Problem-Solving', icon: Target },
         { name: 'Adaptability', icon: Zap },
-        { name: 'Learning Agility', icon: Lightbulb },
         { name: 'Teamwork', icon: Users },
         { name: 'Creativity', icon: Lightbulb },
         { name: 'Focus', icon: Target }
