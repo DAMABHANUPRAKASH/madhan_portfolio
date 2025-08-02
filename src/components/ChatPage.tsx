@@ -28,9 +28,9 @@ const ChatPage: React.FC<ChatPageProps> = ({ messages, onSendMessage, isLoading,
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex flex-col relative">
       {/* Header */}
-      <div className="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-200 z-50 shadow-sm">
+      <div className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md border-b border-gray-200 z-50 shadow-sm">
         <div className="max-w-4xl mx-auto px-4 py-4 flex items-center space-x-4">
           <button
             onClick={onBack}
@@ -54,7 +54,7 @@ const ChatPage: React.FC<ChatPageProps> = ({ messages, onSendMessage, isLoading,
       </div>
 
       {/* Chat Messages Area */}
-      <div className="flex-1 overflow-y-auto px-4 py-6">
+      <div className="flex-1 overflow-y-auto px-4 py-6 pt-20">
         <div className="max-w-4xl mx-auto">
           {messages.length === 0 ? (
             <div className="text-center py-20">
@@ -88,7 +88,7 @@ const ChatPage: React.FC<ChatPageProps> = ({ messages, onSendMessage, isLoading,
       </div>
 
       {/* Input Area */}
-      <div className="sticky bottom-0 bg-white/90 backdrop-blur-md border-t border-gray-200 px-4 py-4 shadow-lg z-40">
+      <div className="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-200 px-4 py-4 shadow-lg z-40">
         <div className="max-w-4xl mx-auto">
           <form onSubmit={handleSubmit} className="flex items-center space-x-4">
             <div className="flex-1 relative">
