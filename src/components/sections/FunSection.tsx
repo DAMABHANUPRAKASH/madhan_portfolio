@@ -20,28 +20,18 @@ const FunSection: React.FC<FunSectionProps> = ({ onChatSubmit }) => {
       {/* Main Image Card */}
       <div className="bg-white/80 backdrop-blur-md rounded-3xl overflow-hidden shadow-xl border border-white/20">
         <div className="relative">
-          {/* Hero Image Placeholder */}
-          <div className="w-full h-96 bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 flex items-center justify-center relative overflow-hidden">
-            {/* Mountain silhouette effect */}
-            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/20 to-transparent"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent"></div>
-            
-            {/* Mountain peaks */}
-            <div className="absolute bottom-0 left-0 right-0">
-              <svg viewBox="0 0 400 100" className="w-full h-24 text-white/10">
-                <polygon points="0,100 50,20 100,40 150,10 200,30 250,5 300,25 350,15 400,35 400,100" fill="currentColor"/>
-              </svg>
-            </div>
-            
-            {/* Climber figure */}
-            <div className="relative z-10 text-center text-white">
-              <div className="text-8xl mb-4">🏔️</div>
-              <div className="text-6xl">⛷️</div>
-            </div>
+          {/* Personal Adventure Image */}
+          <div className="w-full h-96 relative overflow-hidden">
+            <img 
+              src="https://images.pexels.com/photos/1365425/pexels-photo-1365425.jpeg?auto=compress&cs=tinysrgb&w=800" 
+              alt="Adventure activity"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
             
             {/* Caption overlay */}
             <div className="absolute bottom-4 left-4 bg-black/50 backdrop-blur-md text-white px-4 py-2 rounded-xl">
-              <span className="text-sm font-medium">On top of Mont Blanc (me in blue behind)</span>
+              <span className="text-sm font-medium">Adventure time - Mont Blanc expedition!</span>
             </div>
             
             {/* Play button for video */}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, MapPin, Code, Briefcase, Target, Mail, ExternalLink } from 'lucide-react';
+import { Calendar, MapPin, Code, Briefcase, Target, Mail, ExternalLink, Linkedin } from 'lucide-react';
 
 const ContactSection: React.FC = () => {
   const techStack = [
@@ -113,20 +113,31 @@ const ContactSection: React.FC = () => {
 
         {/* Contact Button */}
         <div className="text-center">
-          <a
-            href="mailto:your.email@example.com"
-            className="bg-black text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-800 transition-colors duration-200 flex items-center space-x-2 mx-auto"
-          >
-            <Mail size={16} />
-            <span>Contact me</span>
-          </a>
+          <div className="flex justify-center space-x-4">
+            <a
+              href="mailto:your.email@example.com"
+              className="bg-black text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-800 transition-colors duration-200 flex items-center space-x-2"
+            >
+              <Mail size={16} />
+              <span>Contact me</span>
+            </a>
+            <a
+              href="https://linkedin.com/in/your-profile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-200 flex items-center space-x-2"
+            >
+              <Linkedin size={16} />
+              <span>LinkedIn</span>
+            </a>
+          </div>
         </div>
       </div>
 
       {/* Bottom Message */}
       <div className="text-center">
         <p className="text-gray-700">
-          Oh, you bet! Here's the scoop on what I'm looking for in an internship 👇
+          You can reach me through the contact info above! Feel free to hit me up anytime, I'm always happy to chat! 😉 What's on your mind?
         </p>
       </div>
     </div>

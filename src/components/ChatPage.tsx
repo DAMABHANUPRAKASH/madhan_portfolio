@@ -30,11 +30,11 @@ const ChatPage: React.FC<ChatPageProps> = ({ messages, onSendMessage, isLoading,
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex flex-col">
       {/* Header */}
-      <div className="sticky top-0 bg-white/80 backdrop-blur-md border-b border-gray-200 z-10">
+      <div className="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-200 z-50 shadow-sm">
         <div className="max-w-4xl mx-auto px-4 py-4 flex items-center space-x-4">
           <button
             onClick={onBack}
-            className="flex items-center space-x-2 text-gray-600 hover:text-gray-800 transition-colors duration-200"
+            className="flex items-center space-x-2 text-gray-600 hover:text-gray-800 transition-colors duration-200 bg-white/80 backdrop-blur-sm px-3 py-2 rounded-lg shadow-sm hover:shadow-md"
           >
             <ArrowLeft size={20} />
             <span className="font-medium">Back to Portfolio</span>
@@ -45,7 +45,7 @@ const ChatPage: React.FC<ChatPageProps> = ({ messages, onSendMessage, isLoading,
               <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
                 <span className="text-white text-sm">🤖</span>
               </div>
-              <h1 className="text-xl font-semibold text-gray-800">Chat with Raphael's AI</h1>
+              <h1 className="text-xl font-semibold text-gray-800">Chat with Madan's AI</h1>
             </div>
           </div>
           
@@ -62,7 +62,7 @@ const ChatPage: React.FC<ChatPageProps> = ({ messages, onSendMessage, isLoading,
                 <span className="text-2xl">🤖</span>
               </div>
               <h2 className="text-2xl font-bold text-gray-800 mb-2">Ask me anything!</h2>
-              <p className="text-gray-600">I'm here to answer questions about Raphael's background, skills, and projects.</p>
+              <p className="text-gray-600">I'm here to answer questions about Madan's background, skills, and projects.</p>
             </div>
           ) : (
             <ChatMessages messages={messages} />
@@ -88,7 +88,7 @@ const ChatPage: React.FC<ChatPageProps> = ({ messages, onSendMessage, isLoading,
       </div>
 
       {/* Input Area */}
-      <div className="sticky bottom-0 bg-white/80 backdrop-blur-md border-t border-gray-200 px-4 py-4">
+      <div className="sticky bottom-0 bg-white/90 backdrop-blur-md border-t border-gray-200 px-4 py-4 shadow-lg z-40">
         <div className="max-w-4xl mx-auto">
           <form onSubmit={handleSubmit} className="flex items-center space-x-4">
             <div className="flex-1 relative">
